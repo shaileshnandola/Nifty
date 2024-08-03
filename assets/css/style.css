@@ -1,0 +1,1131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: -24px;
+    padding-right: -24px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.d-none {
+    display: none;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.py12 {
+    padding: 12px;
+}
+
+.py-100 {
+    padding: 100px 0;
+}
+
+.w-1 {
+    width: 8.33%;
+}
+
+.w-2 {
+    width: 16.66%;
+}
+
+.w-3 {
+    width: 25%;
+}
+
+.w-4 {
+    width: 33.33%;
+}
+
+.w-5 {
+    width: 41.66%;
+}
+
+.w-6 {
+    width: 50%;
+}
+
+.w-7 {
+    width: 58.33%;
+}
+
+.w-8 {
+    width: 66.66%;
+}
+
+.w-9 {
+    width: 75%;
+}
+
+.w-10 {
+    width: 83.33%;
+}
+
+.w-11 {
+    width: 91.66%
+}
+
+.w-12 {
+    width: 100%;
+}
+
+.w-1,
+.w-2,
+.w-3,
+.w-4,
+.w-5,
+.w-6,
+.w-7,
+.w-8,
+.w-9,
+.w-10,
+.w-11,
+.w-12 {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+:root {
+    --primary-color: #ab17df;
+    --font-family: 'Nunito Sans 7pt Condensed';
+    --font-family: 'Rajdhani';
+    --white-color: #ffffff;
+    --block-color: #ffffff14;
+    --secoundary: #0c0324;
+    --black-color: #000;
+    --grey-color: #747694;
+    --blue: #4e10ff;
+    --purple: #ab17df;
+    --animation: #ffffff00;
+    --transparant: #ffffffdc;
+    --yellow-color: #FEAD10;
+    --green-color: #82b440;
+    --fs-14: 14px;
+    --fs-19: 19px;
+    --fs-22: 22px;
+    --fs-24: 24px;
+    --fs-36: 36px;
+    --fs-48: 48px;
+    --fs-75: 75px;
+    --fs-82: 82px;
+    --fw-100: 100;
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    --fw-900: 900;
+}
+
+body {
+    font-family: 'Nunito Sans 7pt Expanded';
+    color: var(--white-color);
+    background-color: #11121c;
+}
+
+/* header start */
+header {
+    background-image: url(../img/bg-hero-home.png);
+    width: 100%;
+    z-index: 12;
+    padding-top: 20px;
+}
+
+.menu ul .home a {
+    text-decoration: underline;
+    color: #ab17df;
+    font-family: 'Rajdhani';
+    font-size: var(--fs-19);
+}
+
+.menu ul li a {
+    text-decoration: none;
+}
+
+.menu ul li {
+    padding: 10px 0;
+    margin: 0 15px 0 10px;
+    position: relative;
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    font-weight: 500;
+
+}
+
+.menu ul li i {
+    padding-left: 5px;
+}
+
+.menu ul li a {
+    color: white;
+    text-transform: capitalize;
+    padding-bottom: 4px;
+    top: 20px;
+}
+
+.menu ul li a i {
+    margin-left: 5px;
+}
+
+.menu ul li a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+
+}
+
+header .menu ul li .dropdown {
+    position: absolute;
+    content: '';
+    background-color: black;
+    display: block;
+    width: 150px;
+    top: 80px;
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translatex(-50%);
+    transition: 1s;
+
+}
+
+header .menu ul li .dropdown::before {
+    position: absolute;
+    content: '';
+    box-sizing: border-box;
+    left: 50%;
+    transform: translatex(-50%);
+    border: 10px solid transparent;
+
+
+}
+
+header .menu ul li .dropdown ul li {
+    margin: 0;
+    z-index: 1;
+    position: relative;
+
+}
+
+header .menu ul li .dropdown ul li a {
+    color: grey;
+}
+
+header .menu ul li:hover .dropdown {
+    background-color: black;
+    visibility: visible;
+    opacity: 1;
+
+}
+
+header .menu ul li .dropdown ul li:hover {
+    background-color: blue;
+
+}
+
+header .menu ul li .dropdown ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+header .button button {
+    width: 300px;
+    height: 40px;
+    top: 0;
+    right: 50px;
+    font-family: 'Rajdhani';
+    font-weight: 500;
+    background-image: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: 0;
+    font-size: var(--fs-19);
+    transition: 0.5s;
+}
+
+header .button button:hover {
+    transform: translateY(-10px);
+}
+
+header i {
+    padding: 0 5px;
+    font-size: var(--fs-19);
+}
+
+/* header end */
+
+/* banner-start */
+.banner {
+    padding: 100px 0px 0px;
+    background-image: url('../img/bg-hero-home.png');
+    background-position: 0px -80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% auto;
+}
+
+.banner .banner-content h1 {
+    font-size: var(--fs-82);
+    font-family: 'Rajdhani';
+    font-weight: 550;
+    color: #ffffff;
+}
+
+.banner .banner-content h1 a {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-decoration: none;
+
+}
+
+.banner .banner-content h1 a::before {
+    text-decoration: none;
+    position: absolute;
+    content: '';
+    box-sizing: border-box;
+    height: 30px;
+    width: 140px;
+    background-color: var(--yellow-color);
+    top: 55px;
+    left: 25px;
+    z-index: -1 !important;
+}
+
+.banner .banner-content p {
+    font-size: var(--fs-19);
+    font-family: 'Nunito Sans 7pt Condensed';
+    ;
+    margin-top: 20px;
+    color: var(--grey-color);
+}
+
+.banner .banner-content button {
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 170px;
+    height: 50px;
+    background-image: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    color: #ffffff;
+    font-family: 'Rajdhani';
+    font-size: var(--fs-19);
+    border: 0;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.banner .banner-content button:hover {
+    transform: translateY(-10px);
+}
+
+.banner .banner-content button i {
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+.banner .banner-content .btn {
+
+    background-image: linear-gradient(90deg, #110335 0%, #110336 100%);
+    color: gray;
+    width: 150px;
+    border: 0.5px solid white;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.banner .banner-content .btn:hover {
+    transform: translateY(-10px);
+}
+
+.banner .banner-content h2 {
+    font-size: var(--fs-48);
+    margin-right: 40px;
+    margin-top: 40px;
+    font-family: 'Rajdhani';
+
+}
+
+.banner .banner-content h4 {
+    font-size: var(--fs-19);
+    color: var(--grey-color);
+    font-family: 'Rajdhani';
+}
+
+
+.banner .banner-image{
+    position: relative;
+}
+.banner .banner-image img{
+    border-radius: 5px;
+
+}
+.banner .banner-image::before {
+    position: absolute;
+    content: '';
+    box-sizing: border-box;
+    width: 450px;
+    height: 500px;
+    border: 3px solid var(--primary-color);
+    border-radius: 15px;
+    left: 5%;
+    z-index: -1;
+    bottom: -2%;
+
+  
+    
+}
+
+.banner .contain h5 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: var(--fs-24);
+    font-family: 'Rajdhani';
+}
+
+/* banner-end */
+
+/* image-start */
+.img {
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.img img {
+    text-align: left;
+    margin: 0 50px;
+    font-size: var(--fs-19);
+    font-family: 'Nunito Sans 7pt Condensed';
+    opacity: 0.3;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.img img:hover {
+    color: white;
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+.story-image img {
+    width: 477px;
+    height: 480px;
+    margin-left: 25%;
+}
+
+.story-image h5 {
+    margin-top: -10%;
+    margin-left: 13%;
+    background-color: #00000095;
+    padding: 20px 10% 20px 10px;
+    position: absolute;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+
+.story-content h6 {
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    color: #FEAD10;
+    padding-bottom: 20px;
+}
+
+.story-content h2 {
+    font-size: var(--fs-75);
+    color: #ffffff;
+    font-family: 'Rajdhani';
+    padding-bottom: 20px;
+}
+
+.story-content p {
+    font-size: var(--fs-19);
+    color: var(--grey-color);
+    font-family: 'Nunito Sans 7pt Condensed';
+    margin-bottom: 20px;
+
+}
+
+.story-content p .p1 {
+    font-size: var(--fs-19);
+    color: var(--grey-color);
+    font-family: 'Nunito Sans 7pt Condensed';
+    margin-bottom: 20px;
+}
+
+.story-content button {
+    padding: 15px 20px;
+    width: 180px;
+    background-image: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    border-radius: 4px;
+    border: 0;
+    color: var(--white-color);
+    font-size: var(--fs-19);
+    font-family: 'Nunito Sans 7pt Condensed';
+    transition: 0.5s;
+}
+
+.story-content button:hover {
+    transform: translateY(-10px);
+}
+
+.story-content button i {
+    margin-left: 10px;
+}
+
+/* image-end */
+
+/* collection-start */
+.why {
+    background-image: url('../img/bg-boxstar.png');
+    background-repeat: no-repeat;
+
+}
+
+.why .title {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.why .title h6 {
+    font-size: var(--fs-19);
+    color: #FEAD10;
+    margin-bottom: 15px;
+    font-family: 'Rajdhani';
+}
+
+.why .title h2 {
+    font-size: var(--fs-75);
+    color: var(--white-color);
+    font-family: 'Rajdhani';
+    font-weight: 530;
+
+}
+
+.why .title p {
+    font-size: var(--fs-19);
+    color: var(--grey-color);
+    font-family: 'Nunito Sans 7pt Condensed';
+}
+
+.why .why-image .img1 {
+    padding: 8px 8px 8px 8px;
+    background-color: #ffffff14;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.why .why-image img {
+    width: 240px;
+    height: 270px;
+}
+
+.why .why-image .img1 h6 {
+    padding: 20px 24px;
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    background-color: #0c032480;
+}
+
+.why .why-image .button button {
+    padding: 15px 20px;
+    width: 230px;
+    background-image: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    border-radius: 4px;
+    border: 0;
+    color: var(--white-color);
+    font-size: var(--fs-19);
+    font-family: 'Nunito Sans 7pt Condensed';
+    transition: 0.5s;
+}
+
+.why .why-image .button button:hover {
+    transform: translateY(-10px);
+}
+
+.why .why-image .button i {
+    margin-left: 10px;
+}
+
+/* collection-end */
+
+/* roadmap-start */
+.road .roadmap-content h6 {
+    color: #FEAD10;
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+
+}
+
+.road .roadmap-content h2 {
+    color: var(--white-color);
+    font-size: var(--fs-75);
+    font-family: 'Rajdhani';
+
+}
+
+.road .para p {
+    font-size: var(--fs-19);
+    color: var(--grey-color);
+    font-family: 'Nunito Sans 7pt Condensed';
+
+}
+
+.road {
+    background-image: url('../img/bg-boxstar.png');
+    background-position: right;
+    background-repeat: no-repeat;
+
+}
+
+.road .event .art {
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #1f1535;
+    border-radius: 5px;
+}
+
+.road .event .art h4 {
+    font-size: 24px;
+    font-family: 'Rajdhani';
+    padding-right: 20px;
+    color: #FEAD10;
+}
+
+.road .event .art h5 {
+    font-size: 24px;
+    font-family: 'Rajdhani';
+
+    color: white;
+}
+
+.road .event .art p {
+    font-size: 18px;
+    font-family: 'Nunito Sans 7pt Condensed';
+    color: #a9a0bf;
+    padding-top: 32px;
+
+}
+
+/* roadmap-end */
+/* faq-start */
+.quick h6 {
+    font-size: 18px;
+    font-family: 'Rajdhani';
+    color: #FEAD10;
+}
+
+.quick h2 {
+    font-size: 75px;
+    font-family: 'Rajdhani';
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.quick p {
+    font-size: var(--fs-19);
+    font-family: 'Nunito Sans 7pt Condensed';
+    color: #ffffff99;
+}
+
+.lorem a {
+    font-size: var(--fs-24);
+    font-family: 'Rajdhani';
+    color: white;
+    padding: 0 0 10% 0;
+}
+
+.lorem i {
+    padding: 10px 10%;
+}
+
+/* faq-end*/
+
+/* team-start */
+
+.Team {
+    background-image: url('../img/elipse-5.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+
+}
+
+.Team .title {
+    text-align: center;
+}
+
+.Team .title h6 {
+    font-size: var(--fs-19);
+    color: #FEAD10;
+    margin-bottom: 15px;
+    font-family: 'Rajdhani';
+}
+
+.Team .title h2 {
+    font-size: var(--fs-75);
+    color: var(--white-color);
+    font-family: 'Rajdhani';
+    font-weight: 530;
+
+}
+
+.Team .title p {
+    font-size: var(--fs-19);
+    color: var(--grey-color);
+    font-family: 'Nunito Sans 7pt Condensed';
+}
+
+.Team .Team-image .img1 {
+    padding: 8px 8px 8px 8px;
+    background-color: #ffffff14;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.Team .Team-image img {
+    width: 240px;
+    height: 270px;
+    border-radius: 8px;
+}
+
+.Team .Team-image .img1 h6 {
+    padding: 10px 24px;
+    text-align: center;
+    font-size: var(--fs-19);
+    color: #ffffff;
+    font-family: 'Rajdhani';
+    background-color: #0c032480;
+}
+
+.Team .Team-image .img1 p {
+    padding: 0 24px;
+    text-align: center;
+    font-size: var(--fs-14);
+    color: #ffffff99;
+    font-weight: 300px;
+    font-family: 'Nunito Sans 7pt Condensed';
+    background-color: #0c032480;
+}
+
+.Team .Team-image .img1 .fac {
+    padding: 10px 10px;
+    text-align: center;
+    background-color: #0c032480;
+
+}
+
+.Team .Team-image .img1 .fac i {
+    background-color: #ab17df;
+    border-radius: 50%;
+    padding: 7px;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+}
+
+.Team .Team-image .img1 .fac i:hover {
+    background-color: white;
+    color: #ab17df;
+}
+
+/* team-end */
+
+/* people-start */
+.people {
+    background-image: url('../img/elipse-3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+
+}
+
+.people .people-content h6 {
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    color: #FEAD10
+}
+
+.people .people-content h2 {
+    font-size: var(--fs-75);
+    font-family: 'Rajdhani';
+    color: var(--white-color);
+}
+
+.people .people-content p {
+    font-size: var(--fs-19);
+    font-family: 'Nunito Sans 7pt Condensed';
+    color: gray;
+}
+
+.people .people-content .image img {
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.people .people-content button {
+    margin-top: 20px;
+    padding: 15px 20px;
+    width: 165px;
+    background-image: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    border-radius: 4px;
+    border: 0;
+    color: var(--white-color);
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    font-weight: 550;
+    transition: 0.5s;
+}
+
+.people .people-content button:hover {
+    transform: translateY(-10px);
+}
+
+.people .people-content i {
+    padding-left: 15px;
+}
+
+.people-icon {
+    text-align: center;
+    padding: 54px;
+    margin: 25px 0px 0px 40px;
+    background-color: #968daf2c;
+    border-radius: 8px;
+    width: 600px;
+    height: 490px;
+}
+
+.people .people-button i {
+    margin-left: 10px;
+}
+
+.people .people-icon img {
+    width: 50px;
+    height: 35px;
+}
+
+.people .people-icon h3 {
+    font-size: var(--fs-36);
+    font-family: 'Rajdhani';
+    color: var(--white-color);
+    padding-bottom: 30px;
+}
+
+.people .people-icon p {
+    line-height: 30px;
+    font-size: var(--fs-22);
+    font-family: 'Nunito Sans 7pt Condensed';
+    color: gray;
+
+}
+
+.people .people-image img {
+    margin-top: 30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.people .people-image h6 {
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    color: var(--white-color);
+}
+
+.people .people-image P {
+    font-size: var(--fs-14);
+    font-family: 'Nunito Sans 7pt Condensed';
+    color: grey;
+}
+
+/* people-end */
+/* merchandise-start */
+.merchandise {
+    background-image: url('../img/bg-boxstar.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    text-align: center;
+}
+
+.merchandise h6 {
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    color: #FEAD10;
+}
+
+.merchandise h1 {
+    font-size: var(--fs-75);
+    font-family: 'Rajdhani';
+    font-weight: 550;
+}
+
+.merchandise p {
+    font-size: var(--fs-19);
+    font-family: 'Nunito Sans 7pt Condensed';
+    color: gray;
+    margin-bottom: 40px;
+}
+
+.merchandise .product .messa {
+    margin: 10px;
+    background-color: #ffffff0c;
+    border-radius: 8px;
+
+}
+
+.merchandise .product .messa ul li a h2 {
+    color: white;
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    margin-bottom: 10px;
+
+}
+
+.merchandise .product .messa ul li a h4 {
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    color: grey;
+}
+
+.merchandise .product .messa ul li a button {
+    background-color: #ab17df;
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    font-weight: 510;
+    padding: 8px;
+    color: white;
+    width: 150px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 0;
+
+}
+
+.merchandise .product img {
+    width: 230px;
+    height: 230px;
+    padding: 20px;
+
+}
+
+/* merchandise-end */
+/* news-start */
+.news {
+    text-align: center;
+}
+
+.news h6 {
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    color: #FEAD10;
+}
+
+.news h1 {
+    font-size: var(--fs-75);
+    font-family: 'Rajdhani';
+    font-weight: 550;
+}
+
+.news p {
+    font-size: var(--fs-19);
+    font-family: 'Nunito Sans 7pt Condensed';
+    color: gray;
+
+}
+
+.news .news-image .news-img {
+    background-color: #ffffff12;
+    border-radius: 10px;
+}
+
+.news .news-image .news-img img {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.news .news-image .news-img a h2 {
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    color: white;
+    padding-top: 20px;
+    font-weight: 500;
+
+}
+
+.news .news-image .news-img p {
+    font-size: var(--fs-14);
+    font-family: 'Nunito Sans 7pt Condensed';
+    color: grey;
+    padding-top: 5px;
+
+}
+
+.news .news-image .news-img a h3 {
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    color: #ab17df;
+    padding-top: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+
+.news .news-image .news-img a h3 i {
+    font-size: var(--fs-14);
+    padding-left: 5px;
+}
+
+/* news-end */
+
+/* footer-start */
+
+footer .footer-content {
+    background: linear-gradient(90deg, rgba(24, 6, 227, 1) 0%, rgba(182, 81, 224, 1) 100%);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+footer .footer-content h6 {
+    color: #FEAD10;
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+}
+
+footer .footer-content h3 {
+    color: var(--white-color);
+    font-size: var(--fs-36);
+    font-family: 'Rajdhani';
+    padding-bottom: 10px;
+}
+
+footer .footer-content p {
+    color: var(--white-color);
+    font-size: var(--fs-18);
+    font-family: 'Nunito Sans 7pt Condensed';
+    margin-top: 20px;
+    padding-bottom: 25px;
+}
+
+footer input {
+    padding: 16px;
+    background-color: var(--white-color);
+    width: 258px;
+    border: 0;
+    height: 57px;
+    border-radius: 5px 5px 5px 5px;
+    text-transform: capitalize;
+}
+
+footer button {
+    margin-left: 10px;
+    font-size: var(--fs-19);
+    font-family: 'Rajdhani';
+    background: linear-gradient(90deg, rgba(24, 6, 227, 1) 0%, rgba(182, 81, 224, 1) 100%);
+    background-color: #0C0324;
+    width: 168px;
+    border: 0;
+    height: 57px;
+    color: var(--white-color);
+    border-radius: 5px 5px 5px 5px;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+footer button i {
+    margin-left: 20px;
+}
+
+footer button:hover {
+    transform: translatey(-10px);
+}
+
+footer .footer-icon i {
+    padding-left: 10px;
+    color: var(--white-color);
+    padding-top: 20px;
+}
+
+footer img {
+    width: 150px;
+    height: 50px;
+
+}
+
+footer h1 {
+    color: var(--white-color);
+    font-size: var(--fs-24);
+    font-family: 'Rajdhani';
+    padding-bottom: 35px;
+}
+
+footer ul li {
+    padding-bottom: 10px;
+}
+
+footer ul li a {
+    color: var(--fs-19);
+    font-family: 'Nunito Sans 7pt Condensed';
+    color: var(--white-color);
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.nifty {
+    padding: 30px 0;
+}
+
+.nifty p {
+    font-size: var(--fs-14);
+    padding-top: 30px;
+    font-family: 'Nunito Sans 7pt Condensed';
+    color: grey;
+}
+
+.nifty span {
+    font-size: var(--fs-14);
+    padding-top: 30px;
+    font-family: 'Nunito Sans 7pt Condensed';
+    color: gray;
+}
+
+/* footer-end */
